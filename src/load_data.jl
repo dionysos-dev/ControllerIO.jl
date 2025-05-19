@@ -33,36 +33,3 @@ function parse_controller_tables(grid_df, state_df, ctrl_df, input_df)
 end
 
 end 
-# import StaticArrays: SVector, SMatrix
-# NewControllerList() = Dionysos.Utils.SortedTupleSet{2, NTuple{2, Int}}()
-
-# function solve_concrete_problem(abstract_system, abstract_controller)
-#     function concrete_controller(x; param = false)
-#         # Getting the position of the state in the abstract system
-#         xpos = Dionysos.Domain.get_pos_by_coord(abstract_system.Xdom, x)
-#         if !(xpos ∈ abstract_system.Xdom)
-#             @warn("State out of domain: $x")
-#             return nothing
-#         end
-
-#         # Getting the corresponding abstract state
-#         source = Dionysos.Symbolic.get_state_by_xpos(abstract_system, xpos)
-#         symbollist = Dionysos.Utils.fix_and_eliminate_first(abstract_controller, source)
-#         if isempty(symbollist)
-#             @warn("Uncontrollable state: $x")
-#             return nothing
-#         end
-
-#         # Choosing a random symbol or the first one
-#         if param
-#             symbol = rand(collect(symbollist))[1]
-#         else
-#             symbol = first(symbollist)[1]
-#         end
-
-#         # Getting and return the control points
-#         u = Dionysos.Symbolic.get_concrete_input(abstract_system, symbol)
-
-#         return u
-#     end
-# end
