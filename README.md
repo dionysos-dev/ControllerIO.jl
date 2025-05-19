@@ -9,5 +9,5 @@ This package provides:
 Useful for deployment, testing, and lightweight integration in environments where symbolic abstractions are already computed.
 
 Typical workflow:
-1. Export the controller from within Dionysos using `export_controller_csv(...)`.
-2. Load it externally via `load_controller_csv(...)`, which returns a function `u(x)`.
+1. Export the controller from Dionysos using `export_controller_csv(...)`.
+2. Load it externally via `load_controller_data_csv(...)`, or `get_controller_function(...)` which returns a function `u(x)`.
