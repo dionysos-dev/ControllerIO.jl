@@ -2,7 +2,7 @@ using ControllerIO
 # This is an example for the DCDC-converter example of Dionysos
 
 # Path to exported controller data
-filename = "examples//concrete_controller"
+filename = "examples//DCDC-converter//concrete_controller"
 
 ## Optionnaly check the loaded data from CSV files
 # origin, h, pos2state, state2input, input2u = ControllerIO.LoadData.load_controller_data_csv(filename)
