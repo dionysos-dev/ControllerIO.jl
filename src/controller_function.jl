@@ -28,7 +28,6 @@ function get_controller_function(origin, h, pos2state, state2input, input2u)
             return nothing
         end
         input = state2input[state]
-
         # Lookup concrete input
         if !haskey(input2u, input)
             @warn "No concrete input found for abstract input" input
