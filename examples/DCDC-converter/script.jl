@@ -23,3 +23,8 @@ for x in test_points
     u = concrete_controller(x)
     println("x = $x → u = $u")
 end
+
+origin, h, pos2state, state2input, input2u = ControllerIO.LoadController.load_controller_data_csv(filename)
+
+# Default: plot over dimensions 1 and 2
+# ControllerIO.VisualizeController.plot_controller_grid(origin, h, pos2state, state2input; dims = [1, 2])
